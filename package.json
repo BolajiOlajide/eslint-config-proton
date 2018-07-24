@@ -1,0 +1,18 @@
+{
+  "name": "eslint-config-proton",
+  "version": "1.0.0",
+  "description": "An opinionated custom eslint configuration made by @proton",
+  "main": "index.js",
+  "repository": "git@github.com:BolajiOlajide/eslint-proton.git",
+  "author": "Bolaji Olajide <cooproton@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "babel-eslint": "^8.2.6",
+    "eslint": "^5.2.0",
+    "eslint-plugin-class-property": "^1.1.0",
+    "eslint-plugin-import": "^2.13.0",
+    "eslint-plugin-jsx-a11y": "^6.1.1",
+    "eslint-plugin-react": "^7.10.0"
+  }
+}
