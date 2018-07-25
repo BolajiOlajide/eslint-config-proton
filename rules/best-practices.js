@@ -1,6 +1,7 @@
 module.exports = {
   rules: {
     // enforces getter/setter pairs in objects
+    // https://eslint.org/docs/rules/accessor-pairs
     'accessor-pairs': 'off',
 
     // enforces return statements in callbacks of array's methods
@@ -8,22 +9,29 @@ module.exports = {
     'array-callback-return': 'error',
 
     // treat var statements as if they were block scoped
+    // https://eslint.org/docs/rules/block-scoped-var
     'block-scoped-var': 'error',
 
     // specify the maximum cyclomatic complexity allowed in a program
-    complexity: ['off', 11],
+    // https://eslint.org/docs/rules/complexity
+    complexity: 'off',
 
     // require return statements to either always or never specify values
+    // https://eslint.org/docs/rules/consistent-return
     'consistent-return': 'error',
 
     // specify curly brace conventions for all control statements
-    curly: ['error', 'multi-line'],
+    // https://eslint.org/docs/rules/curly
+    // this can be harmful for code readability (OPINIONATED)
+    curly: ['error', 'all'],
 
     // require default case in switch statements
+    // https://eslint.org/docs/rules/default-case
     'default-case': ['error', { commentPattern: '^no default$' }],
 
     // encourages use of dot notation whenever possible
-    'dot-notation': ['error', { allowKeywords: true }],
+    // https://eslint.org/docs/rules/dot-notation
+    'dot-notation': ['error', { allowKeywords: false }],
 
     // enforces consistent newlines before or after dots
     // http://eslint.org/docs/rules/dot-location
@@ -31,15 +39,20 @@ module.exports = {
 
     // require the use of === and !==
     // http://eslint.org/docs/rules/eqeqeq
-    eqeqeq: ['error', 'allow-null'],
+    eqeqeq: ['error', 'always', {
+      null: 'ignore'
+    }],
 
     // make sure for-in loops have an if statement
+    // https://eslint.org/docs/rules/guard-for-in
     'guard-for-in': 'error',
 
     // disallow the use of alert, confirm, and prompt
-    'no-alert': 'warn',
+    // https://eslint.org/docs/rules/no-alert
+    'no-alert': 'error',
 
     // disallow use of arguments.caller or arguments.callee
+    // https://eslint.org/docs/rules/no-caller
     'no-caller': 'error',
 
     // disallow lexical declarations in case/default clauses
@@ -48,10 +61,13 @@ module.exports = {
 
     // disallow division operators explicitly at beginning of regular expression
     // http://eslint.org/docs/rules/no-div-regex
-    'no-div-regex': 'off',
+    'no-div-regex': 'warn',
 
     // disallow else after a return in an if
-    'no-else-return': 'error',
+    // https://eslint.org/docs/rules/no-else-return
+    'no-else-return': ['error', {
+      allowElseIf: false
+    }],
 
     // disallow empty functions, except for standalone funcs/arrows
     // http://eslint.org/docs/rules/no-empty-function
@@ -68,15 +84,19 @@ module.exports = {
     'no-empty-pattern': 'error',
 
     // disallow comparisons to null without a type-checking operator
-    'no-eq-null': 'off',
+    // https://eslint.org/docs/rules/no-eq-null
+    'no-eq-null': 'warn',
 
     // disallow use of eval()
+    // https://eslint.org/docs/rules/no-eval
     'no-eval': 'error',
 
     // disallow adding to native types
+    // https://eslint.org/docs/rules/no-extend-native
     'no-extend-native': 'error',
 
     // disallow unnecessary function binding
+    // https://eslint.org/docs/rules/no-extra-bind
     'no-extra-bind': 'error',
 
     // disallow Unnecessary Labels
@@ -84,9 +104,16 @@ module.exports = {
     'no-extra-label': 'error',
 
     // disallow fallthrough of case statements
-    'no-fallthrough': 'error',
+    // Set the commentPattern option to a regular expression string to
+    // change the test for intentional fallthrough comment
+    // (// break omitted)
+    // https://eslint.org/docs/rules/no-fallthrough
+    'no-fallthrough': ['error', {
+      commentPattern: 'break[\\s\\w]*omitted'
+    }],
 
     // disallow the use of leading or trailing decimal points in numeric literals
+    // https://eslint.org/docs/rules/no-floating-decimal
     'no-floating-decimal': 'error',
 
     // disallow reassignments of native objects or read-only globals
@@ -107,21 +134,27 @@ module.exports = {
     'no-implicit-globals': 'off',
 
     // disallow use of eval()-like methods
+    // https://eslint.org/docs/rules/no-implied-eval
     'no-implied-eval': 'error',
 
     // disallow this keywords outside of classes or class-like objects
-    'no-invalid-this': 'off',
+    // https://eslint.org/docs/rules/no-invalid-this
+    'no-invalid-this': 'warn',
 
     // disallow usage of __iterator__ property
+    // https://eslint.org/docs/rules/no-iterator
     'no-iterator': 'error',
 
     // disallow use of labels for anything other then loops and switches
+    // https://eslint.org/docs/rules/no-labels
     'no-labels': ['error', { allowLoop: false, allowSwitch: false }],
 
     // disallow unnecessary nested blocks
+    // https://eslint.org/docs/rules/no-lone-blocks
     'no-lone-blocks': 'error',
 
     // disallow creation of functions within loops
+    // https://eslint.org/docs/rules/no-loop-func
     'no-loop-func': 'error',
 
     // disallow magic numbers
@@ -134,14 +167,18 @@ module.exports = {
     }],
 
     // disallow use of multiple spaces
-    'no-multi-spaces': 'error',
+    // https://eslint.org/docs/rules/no-multi-spaces
+    'no-multi-spaces': ['error', {
+      ignoreEOLComments: false
+    }],
 
     // disallow use of multiline strings
+    // https://eslint.org/docs/rules/no-multi-str
     'no-multi-str': 'error',
 
-    // disallow reassignments of native objects
-    // TODO: deprecated in favor of no-global-assign
-    'no-native-reassign': 'off',
+    // disallow assignment to native objects or read-only global variables
+    // https://eslint.org/docs/rules/no-global-assign
+    'no-global-assign': 'warn',
 
     // disallow use of new operator when not part of the assignment or comparison
     'no-new': 'error',
