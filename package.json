@@ -14,5 +14,10 @@
     "eslint-plugin-import": "^2.13.0",
     "eslint-plugin-jsx-a11y": "^6.1.1",
     "eslint-plugin-react": "^7.10.0"
-  }
+  },
+  "keywords": [
+    "proton",
+    "eslint",
+    "eslintconfig"
+  ]
 }
