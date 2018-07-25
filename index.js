@@ -5,8 +5,6 @@ module.exports = {
     './rules/es6',
     './rules/imports',
     './rules/node',
-    './rules/react-a11y',
-    './rules/react',
     './rules/strict',
     './rules/style',
     './rules/variables'
@@ -33,19 +31,12 @@ module.exports = {
   rules: {
     'babel/new-cap': 1,
     'babel/no-invalid-this': 1,
-    'babel/object-curly-spacing': 1,
+    'babel/object-curly-spacing': 0,
     'babel/quotes': 0,
     'babel/semi': 1,
     'babel/no-unused-expressions': 1,
     'strict': 0,
-    'react/jsx-no-bind': 0,
     'indent': ['warn', 2],
-    'react/prefer-es6-class': ['error', 'always'],
-    'react/jsx-uses-react': 2,
-    'react/jsx-uses-vars': 2,
-    'react/react-in-jsx-scope': 2,
-    'react/jsx-indent': 0,
-    'react/no-string-refs': 0,
     'no-shadow': [1, { 'allow': ['req', 'res', 'err'] }],
     'require-jsdoc': [1, {
       'require': {
@@ -60,11 +51,6 @@ module.exports = {
       'requireParamDescription': true,
       'requireReturnDescription': true
     }],
-    'react/jsx-filename-extension': 0,
-    'react/jsx-indent-props': 0,
-    'react/prop-types': 0,
-    'react/no-did-mount-set-state': 0,
-    'react/prefer-stateless-function': 0,
     'no-trailing-spaces': 0,
     'import/prefer-default-export': 0,
     'import/no-unresolved': 0,
