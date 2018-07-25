@@ -27,10 +27,16 @@ module.exports = {
     jest: true
   },
   plugins: [
-    'class-property'
+    'babel'
   ],
   parser: 'babel-eslint',
   rules: {
+    'babel/new-cap': 1,
+    'babel/no-invalid-this': 1,
+    'babel/object-curly-spacing': 1,
+    'babel/quotes': 0,
+    'babel/semi': 1,
+    'babel/no-unused-expressions': 1,
     'strict': 0,
     'react/jsx-no-bind': 0,
     'indent': ['warn', 2],
