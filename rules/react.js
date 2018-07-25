@@ -7,10 +7,6 @@ module.exports = {
       jsx: true,
     },
   },
-  ecmaFeatures: {
-    jsx: true
-  },
-
   // View link below for react rules documentation
   // https://github.com/yannickcr/eslint-plugin-react#list-of-supported-rules
   rules: {

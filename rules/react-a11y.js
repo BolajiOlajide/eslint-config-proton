@@ -3,14 +3,11 @@ module.exports = {
     'jsx-a11y',
     'react'
   ],
-  ecmaFeatures: {
-    jsx: true
-  },
   rules: {
     // Enforce that anchors have content
     // https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/anchor-has-content.md
     // TODO: enable, semver-major
-    'jsx-a11y/anchor-has-content': [0, ['']],
+    'jsx-a11y/anchor-has-content': [0],
 
     // Require ARIA roles to be valid and non-abstract
     // https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/aria-role.md
@@ -28,10 +25,6 @@ module.exports = {
     // properties do not have those attributes.
     // https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/aria-unsupported-elements.md
     'jsx-a11y/aria-unsupported-elements': 2,
-
-    // disallow href "#"
-    // https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/href-no-hash.md
-    'jsx-a11y/href-no-hash': [2, ['a']],
 
     // Require <img> to have a non-empty `alt` prop, or role="presentation"
     // https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/img-has-alt.md
@@ -80,7 +73,7 @@ module.exports = {
 
     // ensure <hX> tags have content and are not aria-hidden
     // https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/heading-has-content.md
-    'jsx-a11y/heading-has-content': [2, ['']],
+    'jsx-a11y/heading-has-content': 2,
 
     // require HTML elements to have a "lang" prop
     // https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/html-has-lang.md
