@@ -14,5 +14,27 @@ or
 yarn add eslint-config-proton --dev
 ```
 
+### Usage
+
+Once installation is complete, create a `.eslintrc` file, this is where your project's eslint config is saved.
+Add the following line to the file and you have the `eslint-proton-config` enabled for your project.
+
+```
+{
+  "root": true,
+  "extends": "proton",
+  "env": {
+    "node": true,
+    "es6": true,
+    "mocha": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module",
+    "allowImportExportEverywhere": true
+ }
+}
+```
+
 ## LICENSE
 MIT
