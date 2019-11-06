@@ -6,11 +6,13 @@ An opinionated ESLint config made by Bolaji Olajide (@Proton). It is based on [S
 
 Installation is easy and can be done with the command:
 
+```sh
+npm install eslint-config-proton --save-dev
 ```
-$ npm install eslint-config-proton --save-dev
-```
+
 or
-```
+
+```sh
 yarn add eslint-config-proton --dev
 ```
 
@@ -19,7 +21,7 @@ yarn add eslint-config-proton --dev
 Once installation is complete, create a `.eslintrc` file, this is where your project's eslint config is saved.
 Add the following line to the file and you have the `eslint-proton-config` enabled for your project.
 
-```
+```json
 {
   "root": true,
   "extends": "proton",
@@ -37,4 +39,5 @@ Add the following line to the file and you have the `eslint-proton-config` enabl
 ```
 
 ## LICENSE
+
 MIT
