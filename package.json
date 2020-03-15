@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-proton",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "An opinionated custom eslint configuration made by @proton",
   "main": "index.js",
   "repository": "git@github.com:BolajiOlajide/eslint-proton.git",
