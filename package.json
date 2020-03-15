@@ -18,5 +18,8 @@
     "proton",
     "eslint",
     "eslintconfig"
-  ]
+  ],
+  "resolutions": {
+    "minimist": ">1.2.2"
+  }
 }
